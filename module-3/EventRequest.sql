@@ -18,13 +18,28 @@ CREATE TABLE IF NOT EXISTS EventRequest (
   CHECK (status IN('Pending','Denied','Approved') AND estaudience>0)
 );
 
-Insert into EVENTREQUEST (EVENTNO,DATEHELD,DATEREQ,CUSTNO,FACNO,DATEAUTH,STATUS,ESTCOST,ESTAUDIENCE,BUDNO) values ('E100',str_to_date('25,OCT,18','%d,%b,%y'),str_to_date('06,JUN,18','%d,%b,%y'),'C100','F100',str_to_date('08,JUN,18','%d,%b,%y'),'Approved',5000,80000,'B1000');
-Insert into EVENTREQUEST (EVENTNO,DATEHELD,DATEREQ,CUSTNO,FACNO,DATEAUTH,STATUS,ESTCOST,ESTAUDIENCE,BUDNO) values ('E101',str_to_date('26,OCT,18','%d,%b,%y'),str_to_date('28,JUL,18','%d,%b,%y'),'C100','F100',null,'Pending',5000,80000,'B1000');
-Insert into EVENTREQUEST (EVENTNO,DATEHELD,DATEREQ,CUSTNO,FACNO,DATEAUTH,STATUS,ESTCOST,ESTAUDIENCE,BUDNO) values ('E103',str_to_date('21,SEP,18','%d,%b,%y'),str_to_date('28,JUL,18','%d,%b,%y'),'C100','F100',str_to_date('01,AUG,18','%d,%b,%y'),'Approved',5000,80000,'B1000');
-Insert into EVENTREQUEST (EVENTNO,DATEHELD,DATEREQ,CUSTNO,FACNO,DATEAUTH,STATUS,ESTCOST,ESTAUDIENCE,BUDNO) values ('E102',str_to_date('14,SEP,18','%d,%b,%y'),str_to_date('28,JUL,18','%d,%b,%y'),'C100','F100',str_to_date('31,JUL,18','%d,%b,%y'),'Approved',5000,80000,'B1000');
-Insert into EVENTREQUEST (EVENTNO,DATEHELD,DATEREQ,CUSTNO,FACNO,DATEAUTH,STATUS,ESTCOST,ESTAUDIENCE,BUDNO) values ('E104',str_to_date('03,DEC,18','%d,%b,%y'),str_to_date('28,JUL,18','%d,%b,%y'),'C101','F101',str_to_date('31,JUL,18','%d,%b,%y'),'Approved',2000,12000,'B1000');
-Insert into EVENTREQUEST (EVENTNO,DATEHELD,DATEREQ,CUSTNO,FACNO,DATEAUTH,STATUS,ESTCOST,ESTAUDIENCE,BUDNO) values ('E105',str_to_date('05,DEC,18','%d,%b,%y'),str_to_date('28,JUL,18','%d,%b,%y'),'C101','F101',str_to_date('01,AUG,18','%d,%b,%y'),'Approved',2000,10000,'B1000');
-Insert into EVENTREQUEST (EVENTNO,DATEHELD,DATEREQ,CUSTNO,FACNO,DATEAUTH,STATUS,ESTCOST,ESTAUDIENCE,BUDNO) values ('E106',str_to_date('12,DEC,18','%d,%b,%y'),str_to_date('28,JUL,18','%d,%b,%y'),'C101','F101',str_to_date('31,JUL,18','%d,%b,%y'),'Approved',2000,10000,'B1000');
-Insert into EVENTREQUEST (EVENTNO,DATEHELD,DATEREQ,CUSTNO,FACNO,DATEAUTH,STATUS,ESTCOST,ESTAUDIENCE,BUDNO) values ('E107',str_to_date('23,NOV,18','%d,%b,%y'),str_to_date('28,JUL,18','%d,%b,%y'),'C105','F100',str_to_date('31,JUL,18','%d,%b,%y'),'Denied',10000,5000,null);
+INSERT INTO EventRequest (evntNo, dateHeld, dateReq, custNo, facNo, dateAuth, status, estCost, estAudience, budNo)
+VALUES ('E100', '2013-10-25', '2013-06-06', 'C100', 'F100', '2013-06-08', 'Approved', '5000.00', '80000', 'B1000');
+
+INSERT INTO EventRequest (evntNo, dateHeld, dateReq, custNo, facNo, dateAuth, status, estCost, estAudience, budNo)
+VALUES ('E101', '2013-10-26', '2013-07-28', 'C100', 'F100', NULL, 'Pending', '5000.00', '80000', 'B1000');
+
+INSERT INTO EventRequest (evntNo, dateHeld, dateReq, custNo, facNo, dateAuth, status, estCost, estAudience, budNo)
+VALUES ('E102', '2013-09-14', '2013-07-28', 'C100', 'F100', '2013-07-31', 'Approved', '5000.00', '80000', 'B1000');
+
+INSERT INTO EventRequest (evntNo, dateHeld, dateReq, custNo, facNo, dateAuth, status, estCost, estAudience, budNo)
+VALUES ('E103', '2013-09-21', '2013-07-28', 'C100', 'F100', '2013-08-01', 'Approved', '5000.00', '80000', 'B1000');
+
+INSERT INTO EventRequest (evntNo, dateHeld, dateReq, custNo, facNo, dateAuth, status, estCost, estAudience, budNo)
+VALUES ('E104', '2013-12-03', '2013-07-28', 'C101', 'F101', '2013-07-31', 'Approved', '2000.00', '12000', 'B1000');
+
+INSERT INTO EventRequest (evntNo, dateHeld, dateReq, custNo, facNo, dateAuth, status, estCost, estAudience, budNo)
+VALUES ('E105', '2013-12-05', '2013-07-28', 'C101', 'F101', '2013-08-01', 'Approved', '2000.00', '10000', 'B1000');
+
+INSERT INTO EventRequest (evntNo, dateHeld, dateReq, custNo, facNo, dateAuth, status, estCost, estAudience, budNo)
+VALUES ('E106', '2013-12-12', '2013-07-28', 'C101', 'F101', '2013-07-31', 'Approved', '2000.00', '10000', 'B1000');
+
+INSERT INTO EventRequest (evntNo, dateHeld, dateReq, custNo, facNo, dateAuth, status, estCost, estAudience, budNo)
+VALUES ('E107', '2013-11-23', '2013-07-28', 'C105', 'F100', '2013-07-31', 'Denied', '10000.00', '5000', NULL);
 
 select * from EventRequest;
